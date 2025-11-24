@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert array</title>
+</head>
+
+<script>
+
+    let array = [12, 23, 34, 45, 56, 67, 78, 89]
+    let NewEl = 90;
+    let position = 3;
+
+    for(i = array.length-1; i>= 0; i--){
+     if(i >= position){
+        array[i+1] = array[i];
+     }
+        if(i == position){
+            array[i] = NewEl;
+        
+        }
+    }
+
+console.log(array)
+
+
+//second option
+
+for (let i = array.length - 1; i >= position; i--) {
+    array[i + 1] = array[i]; 
+    if (i === position) {
+        array[i] = NewEl;
+    }
+}
+
+console.log(array)
+
+</script>
+<body>
+    
+</body>
+</html>
