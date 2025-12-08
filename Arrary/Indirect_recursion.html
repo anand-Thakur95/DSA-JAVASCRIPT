@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indirect recursion</title>
+</head>
+<body>
+    <script>
+let money =100;
+let Iphone = 0;
+
+function buyIphone(x){
+    if(x > 0){
+        Iphone++;
+        buyIphone(x-5);
+console.log(Iphone);
+    }else{
+    
+    console.log("I can't buy Iphone");
+    }
+}
+
+function buymore(x){
+    Iphone++
+buyIphone(x-5);
+
+}
+    </script>
+</body>
+</html>
