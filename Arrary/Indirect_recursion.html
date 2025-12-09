@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indirect recursion</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-let money =100;
-let Iphone = 0;
+      let money = 100;
+      let Iphone = 0;
 
-function buyIphone(x){
-    if(x > 0){
+      function buyIphone(x) {
+        if (x > 0) {
+          console.log("I have ", x, "RS", "Iphone :", Iphone);
+          buymore(x);
+        } else {
+          console.log("I don't have more money", Iphone);
+        }
+      }
+
+      function buymore(x) {
         Iphone++;
-        buyIphone(x-5);
-console.log(Iphone);
-    }else{
-    
-    console.log("I can't buy Iphone");
-    }
-}
-
-function buymore(x){
-    Iphone++
-buyIphone(x-5);
-
-}
+        buyIphone(x - 10);
+      }
+      buyIphone(money);
     </script>
-</body>
+  </body>
 </html>
