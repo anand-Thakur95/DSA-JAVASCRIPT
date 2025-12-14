@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let arr = [];
+    let currentSize = arr.length;
+    let max = 5;
+
+    function push(newELe) {
+      if (currentSize >= max) {
+        alert("you r not add extra value" + newELe);
+        return;
+      }
+      arr[currentSize] = newELe;
+      currentSize += 1;
+    }
+
+    function pop(){
+    if(currentSize > 0){
+    arr.length -=1;
+    }
+    }
+
+    push(20);
+    push(30);
+    push(40);
+    push(50);
+    push(60);
+    {{/*  pop();  */}}  // need to comment out pop 
+    {{/*  pop();  */}}
+    push(70);
+    push(80);
+    push(90);
+
+    console.log(arr);
+  </script>
+  <body></body>
+</html>
