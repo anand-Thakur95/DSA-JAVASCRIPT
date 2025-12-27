@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let arr = [3, 6, 1, 9, 2, 5, 8, 7];
+    function Insertionsort(data) {
+      let i, curr, j;
+      for (i = 1; i < data.length; i++) {
+
+        console.log(data[i])
+
+        curr = data[i];
+        j = i - 1;
+
+        while (j >= 0 && data[j] > curr) {
+          data[j + 1] = data[j];
+
+          j = j - 1;
+        }
+        data[j + 1] = curr;
+      }
+    }
+    Insertionsort(arr);
+    console.log(arr);
+  </script>
+  <body>
+    Insertion sort
+  </body>
+</html>
