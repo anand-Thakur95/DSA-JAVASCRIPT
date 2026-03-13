@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+</head>
+<script>
+    let arr = [1,2,3,4,5,6,7,8,9,10]
+    let find = 7
+    let pos = undefined;
+    let start = 0;
+    let end = arr.length-1;
+ while(start <= end){
+let mid = Math.floor((start+end)/2)
+if(arr[mid] == find){
+pos = mid;
+break;
+}
+else if(arr[mid]< find){
+start = mid + 1;
+
+}
+
+else {
+end = mid -1;
+}
+
+}
+console.warn(pos)
+</script>
+<body>
+    
+</body>
+</html>
