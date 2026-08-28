@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let arr = [];
+    let currentSize = arr.length;
+    let max = 5;
+
+
+
+    function queue() {
+      let newEle = document.getElementById("Element").value;
+
+      if (currentSize >= max) {
+        alert("Arr length is full");
+        return;
+      } else {
+        arr[currentSize] = newEle;
+        currentSize++;
+      }
+      // Clear the input field after adding element
+      document.getElementById("Element").value = "";
+    }
+
+
+
+    function dequeue() {
+      if (currentSize <= 0) {
+        alert("Queue is empty");
+        return;
+      }
+      for (let i = 0; i < currentSize - 1; i++) {
+        arr[i] = arr[i + 1];
+      }
+      currentSize--;
+      arr.length = currentSize;
+    }
+
+
+
+    function front() {
+      console.warn(arr[0]);
+    }
+
+
+
+    function Rear() {
+      console.warn(arr[currentSize - 1]);
+    }
+
+
+
+    function display() {
+      console.warn(arr);
+    }
+  </script>
+
+  
+  <body>
+    <input type="text" placeholder="enter value" id="Element" />
+    <button onclick="queue()">AddElement</button>
+    <button onclick="dequeue()">Remove</button>
+    <button onclick="front()">Front Ele</button>
+    <button onclick="Rear()">Rear Ele</button>
+    <button onclick="display()">Display</button>
+  </body>
+</html>

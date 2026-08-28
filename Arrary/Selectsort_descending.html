@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let items = [1, 63, 6, 32, 7, 86, 43, 55, 78, 53];
+
+function selectionSortDescending(data) {
+    let maxId;
+
+    for (let i = 0; i < data.length; i++) {
+        maxId = i;
+
+        for (let j = i + 1; j < data.length; j++) {
+            if (data[j] > data[maxId]) { 
+                maxId = j;
+            }
+        }
+
+      
+        if (maxId !== i) {
+            let temp = data[maxId];
+            data[maxId] = data[i];
+            data[i] = temp;
+        }
+    }
+
+    return data;
+}
+
+selectionSortDescending(items);
+console.log(items);
+
+</script>
+<body>
+    
+</body>
+</html>

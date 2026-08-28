@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchElement</title>
+</head>
+<script>
+   let arr = [1,2,3,4,5,6,7,8,9]
+   let item = 5;
+   let index = '';
+
+   {{/*  for(i=0; i< arr.length-1; i++){
+
+
+if(arr[i] === item){
+index = i;
+
+}
+}
+console.log(index)  */}}
+
+function FindIndex(){
+
+    let arr = [1,2,3,4,5,6,7,8,9]
+    let item = document.getElementById('item').value;
+    let index = "";
+for(i =0; i < arr.length; i++){
+
+    if(arr[i]==item){
+    index = i;
+    break;
+    }
+
+}
+console.log(index)
+}
+
+</script>
+<body>
+    <input type="text" id="item">
+    <button onclick="FindIndex()">findIndex</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function CheckAnagram(str1, str2) {
+        if (str1.length !== str2.length) {
+          return false;
+        }
+      
+        let count = {};
+      
+        // count characters from str1
+        for (let ch of str1) {
+          count[ch] = (count[ch] || 0) + 1;
+        }
+      
+        // reduce count using str2
+        for (let ch of str2) {
+          if (!count[ch]) {
+            return false;
+          }
+          count[ch]--;
+        }
+      
+        return true;
+      }
+      
+      console.warn(CheckAnagram("hello", "olleh")); // true
+      
+</script>
+
+<body>
+    <h2>Check Alagram</h2>
+</body>
+</html>

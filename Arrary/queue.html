@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+let arr = []
+let currentSize = arr.length
+let max = 5
+
+function queue(newELe){
+    if(currentSize>= max){
+    alert("Arr length is full")
+    return;
+    }
+arr[currentSize] = newELe;
+currentSize++;
+}
+
+function dequeue(){
+    if(currentSize <= 0){
+        alert("Queue is empty");
+        return;
+    }
+    for(let i=0; i < currentSize - 1; i++){
+        arr[i] = arr[i + 1];
+    }
+    currentSize--;
+    arr.length = currentSize;
+}
+function display(){
+console.warn(arr)
+}
+
+queue(10)
+queue(20)
+queue(30)
+queue(40)
+queue(50)
+display()
+
+
+// it is proper working , check in console
+
+</script>
+<body>
+    
+</body>
+</html>

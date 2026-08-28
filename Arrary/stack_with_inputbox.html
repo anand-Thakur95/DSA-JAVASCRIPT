@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    let stack = [];
+    const max = 5;
+
+    function pushElement() {
+        const input = document.getElementById("Ele");
+        const value = input.value.trim();
+
+        if (value === "") {
+            alert("Please enter an element.");
+            return;
+        }
+
+        if (stack.length >= max) {
+            alert("Stack is full (overflow).");
+            return;
+        }
+
+        stack.push(value);
+        console.log("Stack after push:", stack);
+        input.value = "";
+    }
+
+    function popElement() {
+        if (stack.length === 0) {
+            alert("Stack is empty (underflow).");
+            return;
+        }
+
+        const removed = stack.pop();
+        console.log("Popped:", removed);
+        console.log("Stack after pop:", stack);
+    }
+
+    function showStack() {
+        alert("Stack: " + (stack.length ? stack.join(", ") : "empty"));
+        console.log("Current stack:", stack);
+    }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="enter Element " id="Ele">
+    <button id="AddEle" onclick="pushElement()">Add Ele</button>
+    <button id="Remove" onclick="popElement()">Remove Ele</button>
+    <button onclick="showStack()">Show Ele</button>
+</body>
+</html>

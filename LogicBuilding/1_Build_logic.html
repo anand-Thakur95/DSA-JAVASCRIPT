@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let arr = [1,23,41,3,6,7,8,9,12,34]
+   let countLen = 0;
+  let even = arr.filter(arr => arr % 2 === 0)
+  let double = even.map(arr => arr*2)
+
+  for(let i = 0; i<even.length-1; i++){
+    countLen++;
+  }
+  
+  console.log(double)
+  console.log(countLen)
+
+</script>
+
+<body>
+    <h2>Find Even Value from array , Make Double of every element and Find Array length manually .</h2>
+</body>
+</html>
