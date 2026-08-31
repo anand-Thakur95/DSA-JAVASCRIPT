@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Smallest number</title>
+</head>
+<body>
+    <h3>Find the smallest element in array</h3>
+    <h1 id="small"></h1>
+</body>
+<script>
+let small = document.getElementById("small")
+    let arr = [2,4,1,5,7,8,9]
+    let smallest = arr[0]
+    
+    for(let i= 0; i < arr.length; i++){
+
+        if( arr[i] < smallest){
+smallest = arr[i]
+        }  
+    }
+    small.innerText = smallest
+console.log(smallest)
+</script>
+</html>
